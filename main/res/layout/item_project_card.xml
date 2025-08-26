@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_corners2">
+
+    <View
+        android:id="@+id/statusCircle"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_gravity="end"
+        android:background="@drawable/statuscircle"/>
+
+    <TextView
+        android:id="@+id/ProjectTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Project Title"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="-10dp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/descText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Short description"
+        android:textStyle="bold"
+        android:textSize="18sp"
+
+        android:textColor="@color/white"
+        android:layout_marginTop="0dp"
+        tools:ignore="HardcodedText" />
+</LinearLayout>

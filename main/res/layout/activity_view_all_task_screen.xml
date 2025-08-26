@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity2">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topNavbar"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@drawable/rounded_toolbar"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/topNavbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KEEP CALM AND\n GET IT DONE!"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:lineSpacingExtra="-25dp"
+            android:fontFamily="@font/jockey_one"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"
+            android:layout_marginTop="90dp"
+            tools:ignore="HardcodedText" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Tabs -->
+    <LinearLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topNavbar">
+
+        <Button
+            android:id="@+id/returnBtn"
+            android:layout_width="178dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_task"
+            android:fontFamily="@font/jockey_one"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="RETURN"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText,ButtonStyle" />
+
+        <Button
+            android:id="@+id/tabProjects"
+            android:layout_width="178dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_project"
+            android:fontFamily="@font/jockey_one"
+            android:gravity="center"
+            android:padding="4dp"
+            android:textSize="20sp"
+            android:text="PROJECTS"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,ButtonStyle" />
+    </LinearLayout>
+
+    <!-- Project Page -->
+    <LinearLayout
+        android:id="@+id/ProjectPage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/mustard"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VIEW ALL TASKS CREATED FROM EVERY PROJECTS"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/jockey_one"
+            tools:ignore="HardcodedText"
+            android:layout_marginTop="50dp" />
+
+        <!-- Search bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/searchInput"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:autofillHints="Enter Name of Project"
+                android:background="@android:drawable/editbox_background"
+                android:hint="Search here"
+                android:inputType="text"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/searchBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Search"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:clipToPadding="false" />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

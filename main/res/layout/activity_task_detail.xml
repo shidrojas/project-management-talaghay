@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:paddingBottom="32dp"> <!-- keeps buttons above system nav bar -->
+
+        <!-- Project Title Section -->
+        <TextView
+            android:id="@+id/projectTitleLabel"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_section"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:text="PROJECT TITLE"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="90dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/projectTitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:text="Project Title Placeholder"
+            android:textSize="20sp"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+             />
+
+        <!-- Assigned To Section -->
+        <TextView
+            android:id="@+id/sectionDivider"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_section"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:text="ASSIGNED TO"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/detailAssignedTo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:text="ASSIGNED TO"
+            android:textSize="15sp"
+            android:inputType="text"
+            android:background="@drawable/textfield_border"
+            android:layout_marginTop="10dp"
+            android:padding="16dp"
+            android:textColor="#000000"
+            tools:ignore="HardcodedText,TextViewEdits" />
+
+        <!-- Task Section -->
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/rounded_section"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:text="TASK"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText" />
+
+        <!-- GridLayout for status RadioButtons -->
+        <GridLayout
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:padding="8dp"
+            android:layout_marginTop="10dp">
+
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:buttonTint="#000000"
+                android:text="TO DO"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/radio2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:buttonTint="#000000"
+                android:text="IN PROGRESS"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/radio3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:buttonTint="#000000"
+                android:text="FOR REVIEW"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/radio4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:buttonTint="#000000"
+                android:text="COMPLETED"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/detailSubject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:text="SUBJECT"
+            android:padding="16dp"
+            android:inputType="text"
+            android:textSize="15sp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/textfield_border"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/detailDescription"
+            android:layout_width="match_parent"
+            android:layout_height="116dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/textfield_border"
+            android:inputType="textMultiLine"
+            android:gravity="top|start"
+            android:scrollbars="vertical"
+            android:textSize="15sp"
+            android:minLines="3"
+            android:text="DESCRIPTION"
+            android:textColor="#000000"
+            android:overScrollMode="always" />
+
+        <!-- Buttons row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/updateButton"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="Update"
+                android:layout_marginEnd="8dp"
+                android:background="@color/dark_grey" />
+
+            <Button
+                android:id="@+id/doneButton"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="Done"
+                android:background="@color/dark_grey" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

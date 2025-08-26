@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".ProjectDetailsActivity">
+
+    <TextView
+        android:id="@+id/sectionDivider"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/rounded_section"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:text="Project Title"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Project Title -->
+    <TextView
+        android:id="@+id/ProjectTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:fontFamily="@font/jockey_one"
+        android:text="PROJECT TITLE PLACEHOLDER"
+        android:textAllCaps="true"
+        android:textColor="@color/charcoal_blue"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Scrollable Project Description -->
+    <ScrollView
+        android:id="@+id/scrollProjectDescription"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="170dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/ProjectDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jockey_one"
+            android:text="@string/placeholder"
+            android:textColor="@color/charcoal_blue"
+            android:textSize="20sp" />
+    </ScrollView>
+
+    <!-- Buttons Row -->
+    <LinearLayout
+        android:id="@+id/buttonGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="15dp"
+        app:layout_constraintTop_toBottomOf="@id/scrollProjectDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/terminateBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/holo_red_dark"
+            android:text="TERMINATE PROJECT"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:background="@color/dark_grey"
+            android:text="BACK"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <!-- Section Divider -->
+    <TextView
+        android:id="@+id/sectionDivider2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rounded_section"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:text="List of Tasks"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/buttonGroup"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewProjectTasks"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/sectionDivider2"
+        app:layout_constraintBottom_toTopOf="@id/fabAddTask"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/item_task_card2" />
+
+    <!-- Floating Action Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:contentDescription="Add Tasks"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="@color/charcoal_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@android:color/white"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

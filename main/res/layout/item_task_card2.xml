@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:padding="0dp"
+    android:background="@drawable/rounded_corners">
+
+    <!-- Status Circle -->
+    <View
+        android:id="@+id/statusCircle"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_margin="12dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/statuscircle" />
+
+    <!-- Text Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/statusCircle"
+        android:layout_marginTop="-30dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/subjectText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subject"
+            tools:ignore="HardcodedText"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/descText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Short description"
+            tools:ignore="HardcodedText"
+            android:textColor="#DDDDDD" />
+
+        <TextView
+            android:id="@+id/assignedToText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Assigned to: User"
+            android:textColor="#BBBBBB"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ProjectManagementApp" parent="Theme.AppCompat">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/charcoal_blue</item>
+         <item name="colorPrimaryVariant">@color/mustard</item>
+         <item name="colorOnPrimary">@color/white</item>
+
+<!--        disabling the default toolbar-->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+
+    </style>
+
+    <style name="Theme.ProjectManagementApp" parent="Base.Theme.ProjectManagementApp" />
+</resources>

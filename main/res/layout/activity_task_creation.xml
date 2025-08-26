@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".TaskCreation">
+
+<!--this section is for the project title-->
+
+
+    <!--this section is for adding tasks-->
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/rounded_section"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:text="PROJECT TITLE"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/ProjectTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Project Title Placeholder"
+        android:textSize="20sp"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/sectionDivider2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/rounded_section"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:text="ADD TASK"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sectionDivider2">
+
+
+
+
+        <GridLayout
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:padding="8dp">
+
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:buttonTint="#000000"
+                android:text="TO DO"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/radio2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:buttonTint="#000000"
+                android:text="IN PROGRESS"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/radio3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:buttonTint="#000000"
+                android:text="FOR REVIEW"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/radio4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:buttonTint="#000000"
+                android:text="COMPLETED"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+        </GridLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp"
+            android:textColor="#000000"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/assignTo"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:autofillHints="name"
+                android:background="@drawable/textfield_border"
+                android:hint="Assign to someone (Required)"
+                android:inputType="text"
+                android:textColor="@android:color/black"
+                android:textColorHint="#888888"
+                tools:ignore="HardcodedText,InefficientWeight" />
+
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/subject"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Subject (Required)"
+            android:background="@drawable/textfield_border"
+            tools:ignore="HardcodedText"
+            android:textColor="@android:color/black"
+            android:textColorHint="#888888"
+            android:inputType="text"
+            android:autofillHints=""/>
+
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:hint="Add a subject description to better understand this user story (Required)"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/textfield_border"
+            android:gravity="top|start"
+            android:scrollbars="vertical"
+            android:textColor="@android:color/black"
+            android:textColorHint="#888888"
+            android:overScrollMode="always"
+            android:textSize="15sp"
+            android:autofillHints=""/>
+
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="3dp">
+
+            <Button
+                android:id="@+id/createBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="CREATE"
+                android:layout_height="70dp"
+                tools:ignore="ButtonStyle,HardcodedText" />
+
+            <Button
+                android:id="@+id/backBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="BACK"
+                android:layout_height="70dp"
+                tools:ignore="ButtonStyle,HardcodedText" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--this section is for the list of tasks created in the project-->
+<!--    <TextView-->
+<!--        android:id="@+id/sectionDivider3"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="740dp"-->
+<!--        android:background="@drawable/rounded_section"-->
+<!--        android:paddingHorizontal="16dp"-->
+<!--        android:paddingVertical="8dp"-->
+<!--        android:text="LIST OF TASK"-->
+<!--        android:textAllCaps="true"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        tools:ignore="HardcodedText" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

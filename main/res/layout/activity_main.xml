@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <!-- Toolbar / Navbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topNavbar"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@drawable/rounded_toolbar"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/topNavbarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="-10dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/jockey_one"
+                android:lineSpacingExtra="-25dp"
+                android:text="@string/top_navbar_title"
+                android:textColor="@android:color/white"
+                android:textSize="48sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/profileIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="top|end"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="35dp"
+                android:background="@drawable/profile_icon"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                tools:ignore="ContentDescription" />
+
+        </FrameLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <!-- Section Divider -->
+    <TextView
+        android:id="@+id/sectionDivider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_section"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:text="PROJECT MANAGEMENT"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topNavbar"
+        tools:ignore="HardcodedText" />
+
+    <!-- Dashboard Grid -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:columnCount="2"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:rowCount="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topNavbar">
+
+        <!-- NUMBER OF PROJECTS -->
+        <FrameLayout
+            android:layout_width="160dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:background="@color/beige">
+
+            <TextView
+                android:id="@+id/projectCountNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/jockey_one"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/charcoal_blue"
+                android:textSize="28sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/jockey_one"
+                android:gravity="bottom|center_horizontal"
+                android:paddingBottom="8dp"
+                android:text="NUMBER OF PROJECTS"
+                android:textColor="@color/charcoal_blue"
+                tools:ignore="HardcodedText" />
+        </FrameLayout>
+
+        <!-- NUMBER OF TASKS -->
+        <FrameLayout
+            android:layout_width="160dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:background="@color/beige">
+
+            <TextView
+                android:id="@+id/taskCountNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/jockey_one"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/charcoal_blue"
+                android:textSize="28sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/jockey_one"
+                android:gravity="bottom|center_horizontal"
+                android:paddingBottom="8dp"
+                android:text="NUMBER OF TASKS"
+                android:textColor="@color/charcoal_blue"
+                tools:ignore="HardcodedText" />
+        </FrameLayout>
+
+        <!-- COMPLETED -->
+        <FrameLayout
+            android:layout_width="160dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:background="@color/beige">
+
+            <TextView
+                android:id="@+id/completedCountNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/jockey_one"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/charcoal_blue"
+                android:textSize="28sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/jockey_one"
+                android:gravity="bottom|center_horizontal"
+                android:paddingBottom="8dp"
+                android:text="COMPLETED"
+                android:textColor="@color/charcoal_blue"
+                tools:ignore="HardcodedText" />
+        </FrameLayout>
+
+        <!-- TO DO -->
+        <FrameLayout
+            android:layout_width="160dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:background="@color/beige">
+
+            <TextView
+                android:id="@+id/todoCountNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/jockey_one"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/charcoal_blue"
+                android:textSize="28sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/jockey_one"
+                android:gravity="bottom|center_horizontal"
+                android:paddingBottom="8dp"
+                android:text="TO DO"
+                android:textColor="@color/charcoal_blue"
+                tools:ignore="HardcodedText" />
+        </FrameLayout>
+
+    </GridLayout>
+
+    <!-- Tab for Tasks and Projects -->
+    <LinearLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gridLayout">
+
+        <Button
+            android:id="@+id/ViewAllTasks"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_task"
+            android:fontFamily="@font/jockey_one"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="VIEW ALL"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,ButtonStyle" />
+
+        <Button
+            android:id="@+id/tabProjects"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_project"
+            android:fontFamily="@font/jockey_one"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="PROJECTS"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,ButtonStyle" />
+    </LinearLayout>
+
+    <!-- Task Page Section -->
+    <LinearLayout
+        android:id="@+id/TaskPage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/mustard"
+        android:gravity="top"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout"
+        tools:layout_editor_absoluteX="0dp">
+
+        <!--this section contains the title and view all button to view all tasks-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jockey_one"
+                android:text="YOUR TASKS WILL APPEAR HERE"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:padding="8dp" />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
